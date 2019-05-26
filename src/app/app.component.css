@@ -1,0 +1,212 @@
+* { box-sizing:border-box; }
+
+/* basic stylings */
+ .container { 
+  font-family: sans-serif;
+  max-width:600px;
+  display:block; 
+  background:#FFF;
+  padding:50px 0px;
+  margin: auto;
+}
+.top-header {
+  text-align: center;
+  background: blue;
+  padding: 10px 0px 30px;
+  color: #fff;
+  margin-bottom: 80px;
+}
+h2 {
+    margin: 50px 0px 20px;
+    font-size: 25px;
+}
+.top-header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-top: 4px;
+}
+.span_top {
+    padding-right: 8px;
+    color: #fcf78f;
+}
+.text-flex { 
+  display: flex;
+  align-items: center;
+}
+/* form starting stylings */
+.group 	{ 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.country-code {
+  width: 220px;
+  margin-right: 5px;
+}
+.phone { 
+  width: 100%;
+  margin-left: 5px;
+}
+
+/* Phone Number Select */
+/* select starting stylings */
+.select {
+ 	position: relative;
+}
+
+.select-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	padding: 10px 0px 10px 30px;
+	font-size: 18px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0, 0.12);
+    width: 100%;
+}
+
+/* Remove focus */
+
+.select-text:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+
+/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none
+}
+.select:before {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 20px;
+    height: 14px;
+    padding: 0;
+    content: '';
+    background: url(https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/img/flags.png);
+    background-position: -2413px 0px;
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.86);
+	pointer-events: none;
+}
+
+
+input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:100%;
+  border:none;
+  border-bottom: 1px solid rgba(0,0,0, 0.12);
+}
+
+textarea {
+  padding: 10px 10px;
+  border: 1px solid #efefef;
+  resize: none;
+  width: 100%;
+}
+input:focus {
+  outline:none; 
+}
+
+/* LABEL */
+label {
+  color:#999; 
+  font-size:13px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+i.far.fa-edit {
+    margin-left: 10px;
+    font-size: 50px;
+}
+i.far.fa-edit:after {
+    content: "Change Template";
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+button {
+    border: 2px solid #d3cdcd;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 15px 0px;
+    width: 100%;
+    color: blue;
+    font-size: 20px;
+    /* box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2); */
+}
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
